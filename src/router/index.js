@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Headers from '../components/layout/Header.vue'
+import Header from '../components/layout/Header.vue'
 import Home from '../components/home/Home.vue'
+import NotFound from '../components/notFound/NotFound.vue'
+
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -10,10 +13,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: {
+      components: {
         default: Home,
-        'header': Headers
+        'comp-header': Header
       }
+    },
+    {
+      path: '/notFound',
+      name: 'notFound',
+      component: NotFound
+    },
+    {
+      path: '*',
+      redirect: 'notFound'
     }
   ]
 })

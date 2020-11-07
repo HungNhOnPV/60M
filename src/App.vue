@@ -1,10 +1,13 @@
 <template>
-  <router-view name="header" />
+  <div id="app">
+    <router-view name="comp-header" />
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: 'app',
   data () {
     return {}
   }
@@ -12,5 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+  * {
+    margin: 0;
+    padding: 0;
+  }
 </style>

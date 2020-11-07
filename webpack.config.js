@@ -61,6 +61,16 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.ttf$/,
+        loader: 'file-loader',
+        options: {
+          // name: '[name].[ext]?[hash]'
+          name: function (file) {
+            return '/fonts/[name].[ext]?[hash]'
+          }
+        }
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
