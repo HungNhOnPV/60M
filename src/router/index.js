@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Header from '../components/layout/Header.vue'
 import Home from '../components/home/Home.vue'
 import NotFound from '../components/notFound/NotFound.vue'
+import Connections from '../components/connections/Connections.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
         default: Home,
         'comp-header': Header
       }
+    },
+    {
+      path: '/connections',
+      name: 'connections',
+      component: Connections
     },
     {
       path: '/notFound',
