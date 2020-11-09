@@ -24,17 +24,26 @@ export default new Router({
     {
       path: '/connections',
       name: 'connections',
-      component: Connections
+      components: {
+        default: Connections,
+        'comp-header': Header
+      }
     },
     {
       path: '/find-lover',
       name: 'find-love',
-      component: FindLove
+      components: {
+        default: FindLove,
+        'comp-header': Header
+      }
     },
     {
       path: '/dating',
       name: 'dating',
-      component: Dating
+      components: {
+        default: Dating,
+        'comp-header': Header
+      }
     },
     {
       path: '/notFound',

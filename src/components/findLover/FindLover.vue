@@ -86,7 +86,7 @@ export default {
 
   @include customFontFace('sunshiney', '../../fonts/Sunshiney-Regular.ttf');
 
-  .find-lover {
+  .find-lover, h1,h2,h3,h4,h5,h6 {
     font-family: 'sunshiney';
   }
 </style>
