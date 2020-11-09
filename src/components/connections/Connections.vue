@@ -70,20 +70,26 @@ export default {
       text-transform: capitalize;
       text-align: center;
       margin: 70px;
+      position: relative;
+      &::after {
+        content: '';
+        @include customPosition(absolute, 43px, 319px, 1, 230px, 2px, true);
+        background: $colorGray;
+      }
     }
     .wrapper-connections {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       .connection {
-        width: 45%;
+        width: 48%;
         display: flex;
         margin-bottom: 50px;
         border: 1px solid $colorBorder;
         border-radius: 5px;
         box-sizing: border-box;
         &__image {
-          width: 50%;
+          width: 45%;
         }
         &__detail {
           padding: 10px 20px;
@@ -94,7 +100,7 @@ export default {
           }
           &__name, &__age, &__work, &__location {
             @include customFont(18px, 'roboto');
-            margin-bottom: 10px;
+            margin-bottom: 3px;
           }
           &__btn {
             padding: 10px 20px;
