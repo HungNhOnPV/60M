@@ -6,6 +6,7 @@ import Home from '../components/home/Home.vue'
 import NotFound from '../components/notFound/NotFound.vue'
 import Connections from '../components/connections/Connections.vue'
 import FindLove from '../components/findLover/FindLover.vue'
+import Dating from '../components/dating/Dating.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/find-lover',
       name: 'find-love',
       component: FindLove
+    },
+    {
+      path: '/dating',
+      name: 'dating',
+      component: Dating
     },
     {
       path: '/notFound',
