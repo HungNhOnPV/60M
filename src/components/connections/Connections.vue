@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style scope lang='scss'>
+<style scoped lang='scss'>
   @import '../../scss/mixin.scss';
 
   @include customFontFace('roboto', '../../fonts/Roboto-Regular.ttf');

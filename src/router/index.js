@@ -5,6 +5,7 @@ import Header from '../components/layout/Header.vue'
 import Home from '../components/home/Home.vue'
 import NotFound from '../components/notFound/NotFound.vue'
 import Connections from '../components/connections/Connections.vue'
+import FindLove from '../components/findLover/FindLover.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/connections',
       name: 'connections',
       component: Connections
+    },
+    {
+      path: '/find-lover',
+      name: 'find-love',
+      component: FindLove
     },
     {
       path: '/notFound',
