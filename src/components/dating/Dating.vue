@@ -1,17 +1,13 @@
 <template>
   <div class="dating">
-    <div class="find-love">
+    <router-link :to="{name: 'find-love'}" class="find-love">
       <h1 id="red">Find your love</h1>
       <img src="../../assets/Vector1.png" alt="vector1" class="image">
-    </div>
-    <div class="connection">
+    </router-link>
+    <router-link :to="{name: 'connections'}" class="connection">
       <h1 id="blue-1">Connection</h1>
       <img src="../../assets/Vector2.png" alt="vector2" class="image">
-    </div>
-    <div class="connection">
-      <h1 id="blue-2">Connection</h1>
-      <img src="../../assets/Vector2.png" alt="vector2" class="image">
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -23,6 +19,7 @@
   .find-love {
     @include customFont(30px, 'roboto');
     background-color: #FFF;
+    display: block;
     width: 500px;
     text-align: center;
     border: 1px solid	#FF9E9E;
@@ -31,6 +28,7 @@
     margin:  100px auto 50px auto;
     position: relative;
     transition: all .3s ease;
+    text-decoration: none;
     #red {
       color: #FF5151;
     }
@@ -44,7 +42,9 @@
   }
   .connection {
     @include customFont(30px, 'roboto');
+    display: block;
     background-color: #FFF;
+    text-decoration: none;
     width: 500px;
     text-align: center;
     border: 1px solid #17446C;
