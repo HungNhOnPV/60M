@@ -14,48 +14,15 @@
         smoothies & ice creams
       </div>
       <div class="wrapper-product">
-        <div class="product">
-          <img src="../../assets/Product1.jpg" alt="" class="product__image">
+        <div class="product" v-for="(product, index) in products" :key="index" @click="updateCart(product)" >
+          <img :src="product.image" alt="" class="product__image" >
           <div class="box">
-            <div class="product__name">melon love</div>
+            <div class="product__name">{{product.name}}</div>
             <div class="product__point">
               <img src="../../assets/Point.png" alt="" class="product__point__icon">
-              1
+              {{product.point}}
             </div>
-            <div class="product__pay">12.000 vnd</div>
-          </div>
-        </div>
-        <div class="product">
-          <img src="../../assets/Product2.jpg" alt="" class="product__image">
-          <div class="box">
-            <div class="product__name">mango cup</div>
-            <div class="product__point">
-              <img src="../../assets/Point.png" alt="" class="product__point__icon">
-              1
-            </div>
-            <div class="product__pay">12.000 vnd</div>
-          </div>
-        </div>
-        <div class="product">
-          <img src="../../assets/Product3.jpg" alt="" class="product__image">
-          <div class="box">
-            <div class="product__name">ice cream stick</div>
-            <div class="product__point">
-              <img src="../../assets/Point.png" alt="" class="product__point__icon">
-              1
-            </div>
-            <div class="product__pay">15.000 vnd</div>
-          </div>
-        </div>
-        <div class="product">
-          <img src="../../assets/Product4.jpg" alt="" class="product__image">
-          <div class="box">
-            <div class="product__name">buffe ice</div>
-            <div class="product__point">
-              <img src="../../assets/Point.png" alt="" class="product__point__icon">
-              1
-            </div>
-            <div class="product__pay">50.000 vnd</div>
+            <div class="product__pay">{{new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' }).format(product.price)}}</div>
           </div>
         </div>
       </div>
@@ -64,11 +31,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: "home",
   data() {
-    return {};
+    return {
+      products: this.$store.state.products
+    };
   },
+  methods: {
+    ...mapActions(['updateCart'])
+  }
 };
 </script>
 
@@ -114,6 +88,7 @@ export default {
       .product {
         width: 22%;
         box-sizing: border-box;
+        cursor: pointer;
         &__image {
           width: 100%;
         }

@@ -2,48 +2,15 @@
   <div class="connections">
     <h1 class="headline">your connetions</h1>
     <div class="wrapper-connections">
-      <div class="connection">
-        <img src="../../assets/avatar1.jpg" alt="" class="connection__image">
+      <div class="connection" v-for="(data, index) in listData" :key="index">
+        <img :src="data.image" alt="" class="connection__image">
         <div class="connection__detail">
           <h2 class="connection__detail__title">information</h2>
-          <div class="connection__detail__name">Name: Đập chậu cướp hoa</div>
-          <div class="connection__detail__age">Age: 22</div>
-          <div class="connection__detail__work">Work: Hust</div>
-          <div class="connection__detail__location">Location: Hà Nội</div>
-          <button class="connection__detail__btn">accept request</button>
-        </div>
-      </div>
-      <div class="connection">
-        <img src="../../assets/avatar2.jpg" alt="" class="connection__image">
-        <div class="connection__detail">
-          <h2 class="connection__detail__title">information</h2>
-          <div class="connection__detail__name">Name: Đập chậu cướp hoa</div>
-          <div class="connection__detail__age">Age: 22</div>
-          <div class="connection__detail__work">Work: Hust</div>
-          <div class="connection__detail__location">Location: Hà Nội</div>
-          <button class="connection__detail__btn">accept request</button>
-        </div>
-      </div>
-      <div class="connection">
-        <img src="../../assets/avatar3.jpg" alt="" class="connection__image">
-        <div class="connection__detail">
-          <h2 class="connection__detail__title">information</h2>
-          <div class="connection__detail__name">Name: Đập chậu cướp hoa</div>
-          <div class="connection__detail__age">Age: 22</div>
-          <div class="connection__detail__work">Work: Hust</div>
-          <div class="connection__detail__location">Location: Hà Nội</div>
-          <button class="connection__detail__btn">accept request</button>
-        </div>
-      </div>
-      <div class="connection">
-        <img src="../../assets/avatar4.jpg" alt="" class="connection__image">
-        <div class="connection__detail">
-          <h2 class="connection__detail__title">information</h2>
-          <div class="connection__detail__name">Name: Đập chậu cướp hoa</div>
-          <div class="connection__detail__age">Age: 22</div>
-          <div class="connection__detail__work">Work: Hust</div>
-          <div class="connection__detail__location">Location: Hà Nội</div>
-          <button class="connection__detail__btn">accept request</button>
+          <div class="connection__detail__name">Name: {{data.name}}</div>
+          <div class="connection__detail__age">Age: {{data.age}}</div>
+          <div class="connection__detail__work">Work: {{data.work}}</div>
+          <div class="connection__detail__location">Location: {{data.location}}</div>
+          <button class="connection__detail__btn" @click="toggleDialog">accept request</button>
         </div>
       </div>
     </div>
@@ -51,8 +18,17 @@
 </template>
 
 <script>
-export default {
+import { mapActions } from 'vuex'
 
+export default {
+  data() {
+    return {
+      listData: this.$store.state.listData
+    }
+  },
+  methods: {
+    ...mapActions(['toggleDialog'])
+  }
 }
 </script>
 
