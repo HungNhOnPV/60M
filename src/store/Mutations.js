@@ -5,4 +5,6 @@ export const updateCart = (state, payload) => {
 
 export const decrementPoint = (state, payload) => {
   state.user.point--
+  state.Dialog.connection = false
+  state.Dialog.confirm = false
 }

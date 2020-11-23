@@ -1,21 +1,33 @@
 <template>
   <div class="topnav">
-    <router-link class="active" :to="{name: 'home'}"> Dating Ice Cream </router-link>
+    <router-link class="active" :to="{ name: 'home' }">
+      Dating Ice Cream
+    </router-link>
     <div class="menu">
-      <router-link :to="{name: 'dating'}" class="fa fa-heartbeat"> <span>Dating</span></router-link>
-      <router-link :to="{name: 'cart'}" class="fa fa-cart-arrow-down"> <span>Cart</span><b>{{point.length}}</b></router-link>
-      <router-link :to="{name: 'profile'}" class="fa fa-user-circle"> <span>Hi Hirata</span></router-link>
+      <router-link :to="{ name: 'dating' }" class="fa fa-heartbeat">
+        <span>Dating</span
+        ><b
+          >{{ point }}<img src="../../assets/icecream.svg" alt="" class="" /></b
+      ></router-link>
+      <router-link :to="{ name: 'cart' }" class="fa fa-cart-arrow-down">
+        <span>Cart</span></router-link
+      >
+      <router-link :to="{ name: 'profile' }" class="fa fa-user-circle">
+        <span>Hi Hirata</span></router-link
+      >
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
-    return {
-      point: this.$store.state.user.carts
-    }
-  }
+    return {};
+  },
+  computed: {
+    ...mapGetters(["point"]),
+  },
 };
 </script>
 
@@ -29,25 +41,25 @@ export default {
   font-family: "sunshiney";
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #7D005A;
+  border-bottom: 1px solid #7d005a;
   .active {
-    color: #7D005A;
+    color: #7d005a;
     font-size: 28px;
     text-decoration: none;
     padding: 10px 20px;
   }
   .menu {
     a {
-      color: #99B84F;
+      color: #99b84f;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 25px;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       position: relative;
       &:hover {
         background-color: #ffffff;
-        color: #7D005A;
+        color: #7d005a;
       }
       span {
         font-family: "sunshiney";
@@ -62,6 +74,10 @@ export default {
         border-radius: 50%;
         font-size: 1rem;
         color: #f53030;
+        img {
+          width: 15px;
+          margin-left: 5px;
+        }
       }
     }
   }

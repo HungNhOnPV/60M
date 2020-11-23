@@ -19,7 +19,7 @@
           <div class="box">
             <div class="product__name">{{product.name}}</div>
             <div class="product__point">
-              <img src="../../assets/Point.png" alt="" class="product__point__icon">
+              <img src="../../assets/icecream.svg" alt="" class="product__point__icon">
               {{product.point}}
             </div>
             <div class="product__pay">{{new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' }).format(product.price)}}</div>

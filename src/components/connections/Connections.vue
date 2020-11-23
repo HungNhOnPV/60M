@@ -10,7 +10,7 @@
           <div class="connection__detail__age">Age: {{data.age}}</div>
           <div class="connection__detail__work">Work: {{data.work}}</div>
           <div class="connection__detail__location">Location: {{data.location}}</div>
-          <button class="connection__detail__btn" @click="toggleDialog">accept request</button>
+          <button class="connection__detail__btn" @click="toggleAccept(data)">accept request</button>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['toggleDialog'])
+    ...mapActions(['toggleAccept'])
   }
 }
 </script>

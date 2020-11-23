@@ -58,7 +58,10 @@ export const store = new Vuex.Store({
         age: 23,
         work: "hust",
         location: "hà nội",
-        image: "../../public/assets/avatar1.jpg"
+        image: "../../public/assets/avatar1.jpg",
+        facebook: "fb.com/bach",
+        zalo: "zalo.com.vn/bach",
+        phone: '0123456789'
       },
       {
         id: 2,
@@ -66,7 +69,10 @@ export const store = new Vuex.Store({
         age: 23,
         work: "hust",
         location: "hà nội",
-        image: "../../public/assets/avatar2.jpg"
+        image: "../../public/assets/avatar2.jpg",
+        facebook: "fb.com/ha",
+        zalo: "zalo.com.vn/ha",
+        phone: '0123456789'
       },
       {
         id: 3,
@@ -74,7 +80,10 @@ export const store = new Vuex.Store({
         age: 23,
         work: "hust",
         location: "hà nội",
-        image: "../../public/assets/avatar3.jpg"
+        image: "../../public/assets/avatar3.jpg",
+        facebook: "fb.com/hai",
+        zalo: "zalo.com.vn/hai",
+        phone: '0123456789'
       },
       {
         id: 4,
@@ -82,7 +91,10 @@ export const store = new Vuex.Store({
         age: 22,
         work: "hust",
         location: "hà nội",
-        image: "../../public/assets/avatar4.jpg"
+        image: "../../public/assets/avatar4.jpg",
+        facebook: "fb.com/anh",
+        zalo: "zalo.com.vn/anh",
+        phone: '0123456789'
       }
     ]
   },

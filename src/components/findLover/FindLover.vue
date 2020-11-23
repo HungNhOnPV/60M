@@ -56,7 +56,8 @@
                             <img :src="randomData.image" alt="ava" class="img-thumbnail">
                         </div>
                         <div class="row">
-                            <button type="button" class="btn btn-primary btn-block mt-3" @click="toggleDialog">Request Connection</button>
+                            <button type="button" class="btn btn-primary btn-block mt-3" @click="toggleConfirm" v-if="!connection">Request Connection</button>
+                            <button type="button" class="btn btn-primary btn-block mt-3" v-if="connection">Request Sent</button>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -87,7 +88,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['point'])
+    ...mapGetters(['point', 'confirm', 'connection'])
   },
   methods: {
     onFindYourLove(){
@@ -99,7 +100,7 @@ export default {
       this.randomData = this.$store.getters.data[Math.round(Math.random() * (this.$store.getters.data.length - 1))]
       this.$store.commit('decrementPoint')
     },
-    ...mapActions(['toggleDialog'])
+    ...mapActions(['toggleConfirm'])
   }
 }
 </script>
