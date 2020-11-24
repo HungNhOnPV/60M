@@ -55,6 +55,7 @@ export default {
   .background {
     background: url('../../assets/Background.jpg') center no-repeat;
     height: 438px;
+    margin-top: 63px;
     &__text {
       @include customFont(22px, 'roboto');
       padding: 184px 0 0 82px;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <router-view name="comp-header" />
-    <router-view />
     <dialog-find-love v-if="isDialog" />
+    <router-view />
   </div>
 </template>
 

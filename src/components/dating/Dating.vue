@@ -25,7 +25,7 @@
     border: 1px solid	#FF9E9E;
     border-radius: 5px;
     padding: 30px;
-    margin:  100px auto 50px auto;
+    margin:  163px auto 50px auto;
     position: relative;
     transition: all .3s ease;
     text-decoration: none;

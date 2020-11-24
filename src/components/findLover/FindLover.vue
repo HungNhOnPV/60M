@@ -113,4 +113,7 @@ export default {
   .find-lover, h1,h2,h3,h4,h5,h6 {
     font-family: 'sunshiney';
   }
+  .find-lover {
+    padding-top: 90px;
+  }
 </style>

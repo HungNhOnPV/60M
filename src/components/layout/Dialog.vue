@@ -49,7 +49,7 @@ export default {
     bottom: 0;
     background: rgba(0, 0, 0 , .6);
     height: 100vh;
-    z-index: 999;
+    z-index: 1001;
     .dialog {
       position: absolute;
       top: 50%;

@@ -42,6 +42,10 @@ export default {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #7d005a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   .active {
     color: #7d005a;
     font-size: 28px;

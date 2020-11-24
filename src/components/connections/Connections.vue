@@ -45,7 +45,8 @@ export default {
       @include customFont(30px, 'sunshiney');
       text-transform: capitalize;
       text-align: center;
-      margin: 70px;
+      padding-top: 100px;
+      margin: 0 70px 70px 70px;
       position: relative;
       &::after {
         content: '';
