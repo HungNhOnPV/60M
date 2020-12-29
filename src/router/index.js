@@ -7,6 +7,7 @@ import NotFound from '../components/notFound/NotFound.vue'
 import Connections from '../components/connections/Connections.vue'
 import FindLove from '../components/findLover/FindLover.vue'
 import Dating from '../components/dating/Dating.vue'
+import Seat from '../components/seat/Seat.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,14 @@ export default new Router({
       name: 'dating',
       components: {
         default: Dating,
+        'comp-header': Header
+      }
+    },
+    {
+      path: '/seat',
+      name: 'seat',
+      components: {
+        default: Seat,
         'comp-header': Header
       }
     },

@@ -8,6 +8,10 @@
       <h1 id="blue-1">Connection</h1>
       <img src="../../assets/Vector2.png" alt="vector2" class="image">
     </router-link>
+    <router-link :to="{name: 'seat'}" class="connection">
+      <h1 id="blue-1">Book room</h1>
+      <img src="../../assets/Vector.png" alt="vector" class="image">
+    </router-link>
   </div>
 </template>
 
