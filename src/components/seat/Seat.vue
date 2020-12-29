@@ -28,7 +28,7 @@
           {{ point }}
         </h2>
         <div class="warrap__status">
-          <p>Emty</p>
+          <p>Empty</p>
           <p>Preserved</p>
           <p>Preserved for auto-matching</p>
         </div>
@@ -78,6 +78,8 @@ export default {
         background: #99b84f;
         cursor: pointer;
         color: #fff;
+        border-radius: 2px;
+        box-sizing: border-box;
       }
       .seat--red {
         background: #ff4242;
@@ -196,13 +198,12 @@ export default {
       &__status {
         margin: 20px 0;
         p {
-          font-size: 18px;
           position: relative;
           margin-bottom: 20px;
           &::before {
             content: "";
             position: absolute;
-            top: 0;
+            top: -4px;
             left: 0;
             z-index: 2;
             height: 30px;
