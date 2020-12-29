@@ -199,11 +199,12 @@ export default {
         margin: 20px 0;
         p {
           position: relative;
+          font-size: 18px;
           margin-bottom: 20px;
           &::before {
             content: "";
             position: absolute;
-            top: -4px;
+            top: 0;
             left: 0;
             z-index: 2;
             height: 30px;
